@@ -145,6 +145,12 @@ android {
         }
     }
     signingConfigs {
+        release {
+            storeFile file('my-upload-key.keystore')
+            storePassword 'Password@12345'
+            keyAlias 'my-key-alias'
+            keyPassword 'Password@12345'
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
