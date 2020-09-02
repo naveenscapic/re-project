@@ -1,9 +1,11 @@
-import React from 'react';
-import {SafeAreaView, View, StyleSheet} from 'react-native';
-import {Appbar} from 'react-native-paper';
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
+import { SafeAreaView, View, StyleSheet } from 'react-native';
+import { Appbar, Button } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 
-const EditorScreen = ({navigation, route}) => {
+const EditorScreen = ({ navigation, route }) => {
+
   return (
     <SafeAreaView style={styles.root}>
       <Appbar.Header>
@@ -13,17 +15,19 @@ const EditorScreen = ({navigation, route}) => {
       <View style={styles.animationContainer}>
         <LottieView
           autoPlay
-          loop
           style={styles.animation}
           source={require('../../assets/animation.json')}
         />
+        <View style={{ marginTop: 50 }}>
+          <Button mode="contained">Start</Button>
+        </View>
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  root: {flex: 1},
+  root: { flex: 1 },
   animation: {
     width: 300,
     height: 300,
