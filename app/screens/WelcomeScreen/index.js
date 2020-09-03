@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {Button, Text} from 'react-native-paper';
+import {Button, Text} from 'react-native-elements';
 
 const WelcomeScreen = ({navigation}) => {
   return (
@@ -8,9 +8,9 @@ const WelcomeScreen = ({navigation}) => {
       <Text style={styles.text}>Welcome</Text>
       <Button
         mode="contained"
-        onPress={() => navigation.navigate('EditorScreen')}>
-        Get started
-      </Button>
+        onPress={() => navigation.navigate('EditorScreen')}
+        title="Get started"
+      />
     </SafeAreaView>
   );
 };
